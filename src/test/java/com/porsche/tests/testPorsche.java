@@ -6,6 +6,7 @@ import com.porsche.pages.StartPage;
 import com.porsche.utilities.Driver;
 import com.porsche.utilities.TestBase;
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,7 @@ public class testPorsche extends TestBase {
 
 
     @Test
-    public void test1() {
+    public void test1()  {
         open();
         start.link718.click();
 //       step 4  price of Cayman S 718
@@ -123,7 +124,10 @@ public class testPorsche extends TestBase {
 //        23.Select 7 speed Porsche Doppelkupplung (PDK)
         m718CS.speed7RadioButton.click();
 //        24.Select Porsche Ceramic Composite Brakes (PCCB
-        m718CS.PCCB.click();
+        actions.moveToElement(m718CS.lookDown).perform();
+         m718CS.ceramicPc.click();
+
+
 //        25. Verify that Price for Equipment is the sum of Miami Blue price + 20" Carrera SportWheels+ Power Sport Seats
 //        (14way) with Memory Package +Interior Trim in Carbon Fiber i.c.w.Standard Interior + 7speed Porsche Doppelkupplung (PDK) + Porsche Ceramic Composite Brakes (PCCB)
         int priceOf7Speed = priceStringToInt(m718CS.price7Speed);

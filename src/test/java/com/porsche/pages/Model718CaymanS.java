@@ -61,8 +61,13 @@ public class Model718CaymanS {
     @FindBy (xpath = "//span[@id='vs_table_IMG_x_M250_x_c11_M250']")
     public WebElement speed7RadioButton;
 
-    @FindBy (id = "vs_table_IMG_x_M450_x_c81_M450")
-    public WebElement PCCB;
+    @FindBy (id = "ILS_subHdl")
+    public WebElement lookDown;
+
+
+
+    @FindBy (xpath = "//span[@id='vs_table_IMG_x_M450_x_c81_M450']")
+    public WebElement ceramicPc;
 
     @FindBy (xpath = "(//div[@class='pBox'])[41]")
     public WebElement price7Speed;
